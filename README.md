@@ -1,5 +1,7 @@
 # Workplace Coffee Chaos
 
+Made with Replit.ai.
+
 ## Description
 Workplace Coffee Chaos is a fun and engaging game where players collect coffee cups while an AI opponent creates mess. Set in a office environment, this game challenges players to gather as many coffee cups as possible within a time limit while avoiding the mischievous AI.
 
