@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workplace Coffee Chaos</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="game-ui">
+            <div id="level">Level: <span id="current-level">1</span></div>
+            <div id="score">Cups in Lap: <span id="cups-carried">0</span></div>
+            <div id="collected">Cups Collected: <span id="cups-collected">0</span></div>
+            <div id="time">Time: <span id="time-left">60</span>s</div>
+            <div id="volume-control">
+                <label for="music-volume">Music Volume:</label>
+                <input type="range" id="music-volume" min="0" max="1" step="0.1" value="0.5">
+            </div>
+            <button id="play-music">Play Music</button>
+        </div>
+    </div>
+
+    <script src="/static/js/coffee.js"></script>
+    <script src="/static/js/player.js"></script>
+    <script src="/static/js/ai.js"></script>
+    <script src="/static/js/helperAI.js"></script>
+    <script src="/static/js/game.js"></script>
+    <script>
+        document.getElementById('music-volume').addEventListener('input', function(e) {
+            setMusicVolume(parseFloat(e.target.value));
+        });
+
+        document.getElementById('play-music').addEventListener('click', function() {
+            toggleBackgroundMusic();
+        });
+    </script>
+    </body>
+    </html>
